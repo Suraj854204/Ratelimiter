@@ -2,7 +2,7 @@
 
 A small Express service whose middleware enforces different rate limits depending on **who is calling** (the `X-User-Tier` header) and **what they are calling** (a tag attached to each route). State is held entirely in process memory.
 
-**Live deployment:** `<ADD YOUR DEPLOYMENT URL HERE>`
+
 
 Quick check once deployed:
 
