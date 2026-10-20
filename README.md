@@ -2,16 +2,6 @@
 
 A small Express service whose middleware enforces different rate limits depending on **who is calling** (the `X-User-Tier` header) and **what they are calling** (a tag attached to each route). State is held entirely in process memory.
 
-
-
-Quick check once deployed:
-
-```
-curl -i -X POST https://<your-deployment>/ai/generate -H "X-User-Tier: free" -H "X-User-Id: demo"
-```
-
-Send it six times and the sixth response is a `429`.
-
 ## How to run
 
 You need Node.js 18 or newer. From the project folder, run `npm install` once, then `npm start`. The server listens on the port in the `PORT` environment variable, or 3000 if it is unset. To run the test suite, use `npm test`; it uses Node's built-in test runner and a fake clock, so it finishes in about a second and never has to wait for a real 60-second window.
